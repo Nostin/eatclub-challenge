@@ -15,6 +15,10 @@ The app fetches restaurant data on load, displays a restaurant list sorted by be
 - Lucide React
 - Biome
 
+## Live Version
+
+I've deployed my app to vercel to make it easy: https://eatclub-challenge-five.vercel.app/
+
 ## Running the Project
 
 ### 1. Clone the repository
