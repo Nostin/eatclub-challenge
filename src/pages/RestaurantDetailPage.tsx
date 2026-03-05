@@ -4,6 +4,7 @@ import { DealCard } from '../components/DealCard'
 import { FallbackImage } from '../components/FallbackImage'
 import { useRestaurants } from '../features/hooks'
 import { sortDealsByHighestDiscount } from '../features/utils'
+import { RestaurantDetailPageSkeleton } from '../page_loading_skeletons/RestaurantDetailPageSkeleton'
 
 const ActionButtonItem = ({ label, icon }: { label: string; icon: React.ReactNode }) => {
   return (
@@ -26,7 +27,7 @@ export const RestaurantDetailPage = () => {
   }
 
   if (isLoading) {
-    return <p>is loading...</p>
+    return <RestaurantDetailPageSkeleton />
   }
 
   if (isError || !data) {
@@ -53,7 +54,7 @@ export const RestaurantDetailPage = () => {
   const deals = sortDealsByHighestDiscount(restaurant.deals)
 
   return (
-    <main className="mx-auto max-w-3xl">
+    <article className="w-full">
       <Link
         to="/"
         className="mb-4 inline-flex w-fit items-center gap-2 rounded-lg p-2 hover:bg-eatclubred/10 active:scale-95 active:bg-eatclubred/20 focus:outline-none focus:ring-2 focus:ring-eatclubred focus:ring-offset-2"
@@ -108,6 +109,6 @@ export const RestaurantDetailPage = () => {
           ))}
         </div>
       </section>
-    </main>
+    </article>
   )
 }

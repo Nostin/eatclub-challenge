@@ -3,6 +3,7 @@ import { RestaurantCard } from '../components/RestaurantCard'
 import { SearchBar } from '../components/SearchBar'
 import { useDebouncedValue, useRestaurants } from '../features/hooks'
 import { filterRestaurants, sortRestaurantsByBestDeal } from '../features/utils'
+import { RestaurantListPageSkeleton } from '../page_loading_skeletons/RestaurantListPageSkeleton'
 
 export const RestaurantListPage = () => {
   const { data, isLoading, isError, refetch } = useRestaurants()
@@ -21,7 +22,16 @@ export const RestaurantListPage = () => {
 
   if (isLoading) {
     return (
-      <p>is loading...</p>
+      <>
+        <SearchBar value="" onChange={() => {}} disabled />
+        <article className="w-full py-4">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {['sk-1', 'sk-2', 'sk-3', 'sk-4', 'sk-5', 'sk-6'].map((id) => (
+              <RestaurantListPageSkeleton key={id} />
+            ))}
+          </div>
+        </article>
+      </>
     )
   }
 
