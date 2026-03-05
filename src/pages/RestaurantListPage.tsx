@@ -1,18 +1,19 @@
 import { useMemo, useState } from 'react'
 import { RestaurantCard } from '../components/RestaurantCard'
 import { SearchBar } from '../components/SearchBar'
-import { useRestaurants } from '../features/hooks'
+import { useDebouncedValue, useRestaurants } from '../features/hooks'
 import { filterRestaurants, sortRestaurantsByBestDeal } from '../features/utils'
 
 export const RestaurantListPage = () => {
   const { data, isLoading, isError, refetch } = useRestaurants()
   const [searchTerm, setSearchTerm] = useState('')
+  const debouncedSearchTerm = useDebouncedValue(searchTerm, 300)
 
   const restaurants = useMemo(() => {
     const source = data ?? []
-    const filtered = filterRestaurants(source, searchTerm)
+    const filtered = filterRestaurants(source, debouncedSearchTerm)
     return sortRestaurantsByBestDeal(filtered)
-  }, [data, searchTerm])
+  }, [data, debouncedSearchTerm])
 
   const refetchRestaurants = () => {
     refetch()
