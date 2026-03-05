@@ -19,6 +19,10 @@ The app fetches restaurant data on load, displays a restaurant list sorted by be
 
 I've deployed my app to vercel to make it easy: https://eatclub-challenge-five.vercel.app/
 
+## Screenshots
+<img width="601" height="727" alt="Screenshot 2026-03-05 at 5 45 50 PM" src="https://github.com/user-attachments/assets/20bb0e21-4f18-4dc6-afb3-b8649f54efca" />
+<img width="1126" height="722" alt="Screenshot 2026-03-05 at 5 45 33 PM" src="https://github.com/user-attachments/assets/4c269dd7-1872-4396-9f19-d2936578d6b4" />
+
 ## Running the Project
 
 ### 1. Clone the repository
