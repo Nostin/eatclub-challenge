@@ -20,8 +20,8 @@ The app fetches restaurant data on load, displays a restaurant list sorted by be
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-project-folder>
+git clone git@github.com:Nostin/eatclub-challenge.git
+cd eatclub-challenge
 ```
 
 ### 2. Install dependencies
