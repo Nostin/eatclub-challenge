@@ -62,7 +62,7 @@ export const RestaurantCard = ({ restaurant }: RestaurantCardProps) => {
           </Link>
           <button
             type="button"
-            className="rounded-lg hover:bg-eatclubred/10 active:scale-95 active:bg-eatclubred/20 focus:outline-none focus:ring-2 focus:ring-eatclubred focus:ring-offset-2"
+            className="cursor-pointer p-2 rounded-lg -translate-y-1 transform hover:bg-eatclubred/10 active:scale-95 active:bg-eatclubred/20 focus:outline-none focus:ring-2 focus:ring-eatclubred focus:ring-offset-2"
           >
             <Heart />
           </button>
