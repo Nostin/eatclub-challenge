@@ -49,6 +49,8 @@ The app will then be available at the local URL shown in the terminal, usually: 
 ## Notes
 The provided challenge JSON endpoint triggered browser CORS restrictions in local/client-side evaluation, so I mirrored the supplied JSON into a local static file for reliable fetch-on-load behavior during development and review.
 
+I've implemented skeleton loaders and a small artificial delay in the API response time to demonstrate loading state
+
 I used Biome with a small set of sensible formatting/linting preferences, including preferring no semicolons where possible.
 
 Some images in the supplied JSON do not load correctly, so I implemented a fallback image to keep the UI stable and avoid broken image states.
