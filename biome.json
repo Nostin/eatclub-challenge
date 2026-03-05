@@ -1,0 +1,29 @@
+{
+  "$schema": "https://biomejs.dev/schemas/latest/schema.json",
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "files": {
+    "ignore": ["src/app.css"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "double",
+      "trailingCommas": "es5",
+      "arrowParentheses": "always"
+    }
+  },
+  "linter": {
+    "enabled": true
+  }
+}
